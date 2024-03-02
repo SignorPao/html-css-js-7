@@ -18,7 +18,8 @@
 :root {
   --header-height: 3.75rem; /*60px*/
   --max-width: 75rem; /*1200px*/
-  --margin: 1rem;
+  /* --margin: 1rem; */
+  --padding: 1rem;
 
   --color-primary: rgb(5, 131, 242);
   /* --primary-color: #3D9DF2; */
@@ -27,6 +28,7 @@
   --white: rgb(255, 255, 255);
   --light-grey: rgb(232, 232, 232);
   --black: rgb(0, 0, 0);
+  --soft-black: rgb(0, 0, 0, 0.2);
 
   --font-logo: "Bariol-Bold", Tahoma, sans-serif;
   --font-title: "Crimson Pro", "Times New Roman", serif;
@@ -40,6 +42,8 @@
   --extra-small-font-size: 0.625rem;
 
   --b-radius: 0.2rem;
+  --transition-fast: 0.1s;
+  --transition-slow: 0.3s;
 }
 
 /* responsive typography */
@@ -101,6 +105,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 img {
@@ -109,13 +114,114 @@ img {
   height: auto;
 }
 
+button,
+input {
+  background-color: transparent;
+  border: none;
+  outline: transparent;
+}
+
 /* reusable classes */
 .wrapper {
   max-width: var(--max-width);
-  margin-inline: var(--margin);
+  /* margin-inline: var(--margin); */
+  padding-inline: var(--padding);
+  margin-inline: auto;
 }
 
 .logo {
   font-family: var(--font-logo);
   font-size: var(--logo-font-size);
 }
+
+/* header */
+header {
+  position: fixed;
+  width: 100%;
+  height: var(--header-height);
+  background-color: transparent;
+  /* padding: var(--padding); */
+  color: var(--white);
+}
+
+header:has(.mobile-nav ul.open) {
+  color: var(--color-primary);
+}
+
+.mobile-nav {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.mobile-nav ul {
+  transform: translateY(-100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  z-index: -1;
+  color: initial;
+  transition: var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block-start: var(--header-height);
+  font-weight: 500;
+}
+
+.mobile-nav ul.open {
+  transform: translateY(0);
+}
+
+.mobile-nav li {
+  width: 100%;
+  line-height: 2.5rem;
+  border-top: thin solid var(--soft-black);
+}
+
+.mobile-nav li:last-of-type {
+  border-bottom: thin solid var(--soft-black);
+}
+
+.mobile-nav li a {
+  display: inline-block;
+  padding-block: 0.5rem;
+  height: 100%;
+  width: 100%;
+  padding-inline: var(--padding);
+  cursor: pointer;
+  transition: color var(--transition-slow);
+}
+
+.mobile-nav li a:hover {
+  color: var(--color-primary);
+}
+
+.mobile-nav li:nth-last-child(n + 3) a::after {
+  content: url("../img/arrow-down.png");
+  position: absolute;
+  right: var(--padding);
+  display: inline-block;
+  border-left: thin solid var(--soft-black);
+  padding-inline-start: 1rem;
+}
+
+/* main */
+/* hero section */
+.hero {
+  width: 100%;
+  height: 2000px;
+  background-color: var(--color-primary);
+}
+
+/* footer */
