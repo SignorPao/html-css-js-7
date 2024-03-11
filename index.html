@@ -47,6 +47,10 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header>
@@ -108,11 +112,138 @@
         </div>
       </section>
 
-      <section class="slider"></section>
+      <section class="slider wrapper">
+        <div class="slider-top">
+          <div class="slider-text">
+            <h3>Trending Homes in Seattle, WA</h3>
+            <p>Viewed and saved the most in the area over the past 24 hours</p>
+            <!-- <h3>Get home recommendations</h3>
+            <p>Sign in for a more personalized experience.</p>
+            <button class="btn">Sign in</button> -->
+          </div>
+          <div class="slider-btns">
+            <div class="prev"></div>
+            <div class="next"></div>
+          </div>
+        </div>
+
+        <div class="slider-swiper swiper">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide">
+              <div class="img">
+                <img
+                  src="/assets/img/signin-0.webp"
+                  alt="home recomedation block image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="txt">
+                <p class="price">$795,000</p>
+                <p class="desc">
+                  <span>3</span> bds |<span>2</span> ba |<span>1,920</span> sqft
+                  | Active
+                </p>
+                <p class="desc-2">6048 3rd Avenue NW, Seattle, WA, 98107</p>
+                <p class="desc-3">
+                  MLS ID #2204207, Jacquelyn Phillips. Listing provided by NWMLS
+                </p>
+              </div>
+            </article>
+            <article class="swiper-slide">
+              <div class="img">
+                <img
+                  src="/assets/img/signin-1.webp"
+                  alt="home recomedation block image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="txt">
+                <p class="price">$795,000</p>
+                <p class="desc">
+                  <span>3</span> bds |<span>2</span> ba |<span>1,920</span> sqft
+                  | Active
+                </p>
+                <p class="desc-2">6048 3rd Avenue NW, Seattle, WA, 98107</p>
+                <p class="desc-3">
+                  MLS ID #2204207, Jacquelyn Phillips. Listing provided by NWMLS
+                </p>
+              </div>
+            </article>
+            <article class="swiper-slide">
+              <div class="img">
+                <img
+                  src="/assets/img/signin-2.webp"
+                  alt="home recomedation block image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="txt">
+                <p class="price">$795,000</p>
+                <p class="desc">
+                  <span>3</span> bds |<span>2</span> ba |<span>1,920</span> sqft
+                  | Active
+                </p>
+                <p class="desc-2">6048 3rd Avenue NW, Seattle, WA, 98107</p>
+                <p class="desc-3">
+                  MLS ID #2204207, Jacquelyn Phillips. Listing provided by NWMLS
+                </p>
+              </div>
+            </article>
+            <article class="swiper-slide">
+              <div class="img">
+                <img
+                  src="/assets/img/signin-3.webp"
+                  alt="home recomedation block image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="txt">
+                <p class="price">$795,000</p>
+                <p class="desc">
+                  <span>3</span> bds |<span>2</span> ba |<span>1,920</span> sqft
+                  | Active
+                </p>
+                <p class="desc-2">6048 3rd Avenue NW, Seattle, WA, 98107</p>
+                <p class="desc-3">
+                  MLS ID #2204207, Jacquelyn Phillips. Listing provided by NWMLS
+                </p>
+              </div>
+            </article>
+            <article class="swiper-slide">
+              <div class="img">
+                <img
+                  src="/assets/img/signin-4.webp"
+                  alt="home recomedation block image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="txt">
+                <p class="price">$795,000</p>
+                <p class="desc">
+                  <span>3</span> bds |<span>2</span> ba |<span>1,920</span> sqft
+                  | Active
+                </p>
+                <p class="desc-2">6048 3rd Avenue NW, Seattle, WA, 98107</p>
+                <p class="desc-3">
+                  MLS ID #2204207, Jacquelyn Phillips. Listing provided by NWMLS
+                </p>
+              </div>
+            </article>
+            <!-- <div class="swiper-slide">Slide 2</div> -->
+            <!-- <div class="swiper-slide">Slide 3</div> -->
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+      </section>
+
+      <section class="cards"></section>
     </main>
 
     <footer></footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script async src="assets/js/main.js"></script>
   </body>
 </html>

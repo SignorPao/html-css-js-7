@@ -19,3 +19,33 @@ link.forEach((l) =>
     navLinks.scrollTo(0, 0);
   })
 );
+
+// slider swiper
+const slider = new Swiper(".swiper", {
+  loop: true,
+  a11y: {
+    prevSlideMessage: "Previous slide",
+    nextSlideMessage: "Next slide",
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  slidesPerView: 1.3,
+  spaceBetween: 16,
+  navigation: {
+    nextEl: ".next",
+    prevEl: ".prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2.3,
+    },
+    890: {
+      // slidesPerView: 2.3,
+    },
+    1150: {
+      slidesPerView: 3.3,
+    },
+  },
+});
