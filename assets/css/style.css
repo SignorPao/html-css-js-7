@@ -483,7 +483,22 @@ header:has(.mobile-nav ul.open) {
 .swiper-button-prev,
 .swiper-button-next {
   display: none;
-  /* opacity: 0; */
+}
+
+.slider-bottom {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.slider-bottom a {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary-hover);
+  text-underline-offset: 0.2rem;
+}
+
+.slider-bottom a:hover {
+  text-decoration: underline;
 }
 
 /* cards section */
